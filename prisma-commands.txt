@@ -1,0 +1,12 @@
+- instalação do prisma
+
+yarn add prisma -d
+yarn add @prisma/client
+
+- gerando o arquivo prisma com o banco SQLite
+
+npx prisma init --datasource-provider SQLite
+
+- gera uma nova migration
+
+npx prisma migrate dev
