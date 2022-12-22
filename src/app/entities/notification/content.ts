@@ -14,10 +14,6 @@ export class Content{
     return this.content
   }
 
-  changeName(){
-    
-  }
-
   private validateContentLenght(content: string): boolean{
     return content.length >= 5 && content.length <= 240
   }
