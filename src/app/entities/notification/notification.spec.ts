@@ -9,7 +9,7 @@ const makeNotification = () => {
   })
 }
 
-describe('Notification', () => {
+describe('Notification Entity', () => {
   it('should create a notification on success', () => {
     const notification = makeNotification()
     expect(notification).toBeTruthy()
