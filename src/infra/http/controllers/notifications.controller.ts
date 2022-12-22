@@ -1,7 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CreateNotificationDTO } from '../dtos/create-notification-dto';
-import { PrismaService } from '../../database/prisma/prisma.service';
-import { SendNotification } from 'src/app/usecases/send-notification';
+import { SendNotification } from '@app/usecases/send-notification';
 
 @Controller('notifications')
 export class NotificationsController {
@@ -18,6 +17,13 @@ export class NotificationsController {
       category
     })
 
-    return {notification}
+    return {
+      notification: {
+        id: notification.id,
+        content: notification.content.value,
+        category: notification.category,
+        recipientId: notification.recipientId
+      }
+    }
   }
 }
