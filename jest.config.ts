@@ -1,3 +1,6 @@
+import {pathsToModuleNameMapper} 'ts-jest'
+import {compilerOptions} from './tsconfig.json'
+
 export default {
   "moduleFileExtensions": [
     "js",
